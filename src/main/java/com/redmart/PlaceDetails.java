@@ -3,11 +3,11 @@ package com.redmart;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlaceDetails {
+public class PlaceDetails implements Comparable<PlaceDetails>{
 
 	int x;
 	int y;
-	int value;
+	Integer value;
 	boolean pathExists = false;
 	List<Integer[]> neighbours = new ArrayList<Integer[]>();
 	public PlaceDetails(int x,int y,int value, Integer[][] inputArr){
@@ -36,5 +36,10 @@ public class PlaceDetails {
 			coordinates[1]=y;
 			this.neighbours.add(coordinates);
 		}
+	}
+	
+	@Override
+	public int compareTo(PlaceDetails placeDetails) {
+		return this.value.compareTo(placeDetails.value);
 	}
 }

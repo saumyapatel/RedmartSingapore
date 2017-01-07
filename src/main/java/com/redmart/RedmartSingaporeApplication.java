@@ -9,7 +9,6 @@ public class RedmartSingaporeApplication {
 	public static void main(String[] args) {
 		// SpringApplication.run(RedmartSingaporeApplication.class, args);
 
-		System.out.println("Hello World!!");
 		ReadFile readFile = new ReadFile();
 		Integer[][] inputArr = readFile.readFile();
 		FindLongestHighestPath flhp = new FindLongestHighestPath(inputArr);
